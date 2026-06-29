@@ -1,0 +1,247 @@
+/* ==========================================================
+   Finance Dashboard
+   File : css/footer.css
+   Description : Footer
+   ========================================================== */
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer{
+
+    margin-top:32px;
+
+    padding:28px 0;
+
+}
+
+.footer-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    padding:24px 28px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow-card);
+
+}
+
+
+/* =====================================
+   LEFT
+===================================== */
+
+.footer-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.footer-title{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+.footer-description{
+
+    color:var(--text-light);
+
+    font-size:.84rem;
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================
+   RIGHT
+===================================== */
+
+.footer-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:10px;
+
+}
+
+
+/* =====================================
+   LAST SYNC
+===================================== */
+
+.last-sync{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:var(--success-soft);
+
+    color:var(--success);
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+}
+
+.last-sync .material-symbols-outlined{
+
+    font-size:18px;
+
+}
+
+
+/* =====================================
+   VERSION
+===================================== */
+
+.version{
+
+    color:var(--text-muted);
+
+    font-size:.78rem;
+
+}
+
+
+/* =====================================
+   CREDIT
+===================================== */
+
+.credit{
+
+    margin-top:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:var(--text-muted);
+
+    font-size:.78rem;
+
+}
+
+.credit strong{
+
+    color:var(--primary);
+
+}
+
+
+/* =====================================
+   FOOTER DIVIDER
+===================================== */
+
+.footer-divider{
+
+    margin:18px 0;
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+}
+
+
+/* =====================================
+   STATUS
+===================================== */
+
+.sync-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:.8rem;
+
+    color:var(--text-light);
+
+}
+
+.sync-status::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--success);
+
+    animation:pulse 2s infinite;
+
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:768px){
+
+    .footer-card{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .footer-right{
+
+        width:100%;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+
+/* =====================================
+   END OF FILE
+===================================== */

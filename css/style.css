@@ -1,0 +1,1067 @@
+/* ==========================================================
+   Finance Dashboard
+   File : css/style.css
+   Description : Global Styles
+   ========================================================== */
+
+/* =====================================
+   BODY
+===================================== */
+
+body{
+
+    min-height:100vh;
+
+    background:var(--background);
+
+    color:var(--text);
+
+}
+
+/* =====================================
+   APP
+===================================== */
+
+.app{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:24px;
+
+}
+
+/* =====================================
+   MAIN
+===================================== */
+
+main{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* =====================================
+   SECTION
+===================================== */
+
+.section{
+
+    background:var(--surface);
+
+    border-radius:var(--radius-lg);
+
+    padding:24px;
+
+    box-shadow:var(--shadow-card);
+
+    animation:fadeUp .5s ease;
+
+}
+
+.section:hover{
+
+    box-shadow:var(--shadow-lg);
+
+    transition:var(--transition);
+
+}
+
+/* =====================================
+   SECTION HEADER
+===================================== */
+
+.section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.section-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.section-title h2{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+}
+
+.section-subtitle{
+
+    font-size:.88rem;
+
+    color:var(--text-muted);
+
+    margin-top:4px;
+
+}
+
+/* =====================================
+   BADGE
+===================================== */
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:.76rem;
+
+    font-weight:600;
+
+}
+
+.badge-primary{
+
+    background:var(--badge-blue-bg);
+
+    color:var(--badge-blue-text);
+
+}
+
+.badge-success{
+
+    background:var(--badge-green-bg);
+
+    color:var(--badge-green-text);
+
+}
+
+.badge-danger{
+
+    background:var(--badge-red-bg);
+
+    color:var(--badge-red-text);
+
+}
+
+.badge-warning{
+
+    background:var(--badge-orange-bg);
+
+    color:var(--badge-orange-text);
+
+}
+
+.badge-info{
+
+    background:var(--badge-cyan-bg);
+
+    color:var(--badge-cyan-text);
+
+}
+
+.badge-purple{
+
+    background:var(--badge-purple-bg);
+
+    color:var(--badge-purple-text);
+
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.dashboard-header{
+
+    background:var(--header-gradient);
+
+    color:#fff;
+
+    border-radius:28px;
+
+    padding:34px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.dashboard-header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    right:-80px;
+
+    top:-80px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.dashboard-header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:150px;
+
+    height:150px;
+
+    left:-50px;
+
+    bottom:-50px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.greeting{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.greeting h1{
+
+    color:#fff;
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.greeting p{
+
+    color:rgba(255,255,255,.85);
+
+    margin-top:6px;
+
+}
+
+.daily-insight{
+
+    margin-top:28px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:18px;
+
+    padding:18px;
+
+}
+
+.daily-insight h3{
+
+    color:#fff;
+
+    font-size:.95rem;
+
+}
+
+.daily-insight p{
+
+    color:#fff;
+
+    margin-top:8px;
+
+    line-height:1.7;
+
+}
+
+/* =====================================
+   QUICK SUMMARY
+===================================== */
+
+.quick-summary{
+
+    margin-top:22px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:16px;
+
+}
+
+.quick-item{
+
+    background:rgba(255,255,255,.12);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.quick-item small{
+
+    display:block;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+.quick-item strong{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:1.15rem;
+
+    color:#fff;
+
+}
+
+/* =====================================
+   DASHBOARD MONTH
+===================================== */
+
+.dashboard-month{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-top:24px;
+
+}
+
+.dashboard-month .left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.dashboard-month .right{
+
+    min-width:230px;
+
+}
+
+/* =====================================
+   REMINDER
+===================================== */
+
+.reminder{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.reminder-box{
+
+    flex:1;
+
+    overflow:hidden;
+
+    background:var(--surface-alt);
+
+    border-radius:16px;
+
+    border:1px solid var(--border);
+
+    padding:12px 16px;
+
+}
+
+.reminder-track{
+
+    display:inline-flex;
+
+    gap:40px;
+
+    white-space:nowrap;
+
+    animation:marquee 28s linear infinite;
+
+}
+
+@keyframes marquee{
+
+    from{
+
+        transform:translateX(100%);
+
+    }
+
+    to{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+.reminder-item{
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+}
+
+/* =====================================
+   DIVIDER
+===================================== */
+
+.divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:18px 0;
+
+}
+
+/* =====================================
+   CONTENT WRAPPER
+===================================== */
+
+.content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+/* ==========================================================
+   Finance Dashboard
+   File : css/style.css
+   Part : 2/2
+   Description : Global Styles (Continue)
+   ========================================================== */
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    border-radius:var(--radius-md);
+
+    padding:12px 20px;
+
+    font-size:.92rem;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    user-select:none;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.btn:active{
+
+    transform:scale(.98);
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-light);
+
+}
+
+.btn-success{
+
+    background:var(--success);
+
+    color:#fff;
+
+}
+
+.btn-danger{
+
+    background:var(--danger);
+
+    color:#fff;
+
+}
+
+.btn-warning{
+
+    background:var(--warning);
+
+    color:#fff;
+
+}
+
+.btn-outline{
+
+    background:#fff;
+
+    color:var(--primary);
+
+    border:1px solid var(--border);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary-soft);
+
+}
+
+/* =====================================
+   FORM
+===================================== */
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.form-label{
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    color:var(--text-light);
+
+}
+
+.input,
+.select{
+
+    width:100%;
+
+    height:48px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-md);
+
+    padding:0 16px;
+
+    background:#fff;
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+.input:focus,
+.select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+/* =====================================
+   LINK
+===================================== */
+
+.link{
+
+    color:var(--primary);
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.link:hover{
+
+    opacity:.8;
+
+}
+
+/* =====================================
+   LOADING
+===================================== */
+
+.loading{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:40px;
+
+}
+
+.spinner{
+
+    width:38px;
+
+    height:38px;
+
+    border:4px solid var(--border);
+
+    border-top-color:var(--primary);
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* =====================================
+   SKELETON
+===================================== */
+
+.skeleton{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#e2e8f0;
+
+    border-radius:12px;
+
+}
+
+.skeleton::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.6),
+
+        transparent
+
+    );
+
+    animation:skeleton 1.2s infinite;
+
+}
+
+@keyframes skeleton{
+
+    from{
+
+        transform:translateX(-100%);
+
+    }
+
+    to{
+
+        transform:translateX(100%);
+
+    }
+
+}
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.empty-state{
+
+    text-align:center;
+
+    padding:48px 24px;
+
+}
+
+.empty-state span{
+
+    font-size:60px;
+
+    color:var(--text-muted);
+
+}
+
+.empty-state h3{
+
+    margin-top:18px;
+
+}
+
+.empty-state p{
+
+    margin-top:10px;
+
+    color:var(--text-muted);
+
+}
+
+/* =====================================
+   ERROR STATE
+===================================== */
+
+.error-box{
+
+    padding:24px;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--danger-soft);
+
+    color:var(--danger);
+
+    text-align:center;
+
+}
+
+.error-box h3{
+
+    color:var(--danger);
+
+}
+
+.error-box p{
+
+    margin-top:8px;
+
+}
+
+/* =====================================
+   TOAST
+===================================== */
+
+.toast{
+
+    position:fixed;
+
+    bottom:24px;
+
+    right:24px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    box-shadow:var(--shadow-lg);
+
+    padding:18px 22px;
+
+    z-index:var(--z-toast);
+
+    animation:fadeUp .3s ease;
+
+}
+
+/* =====================================
+   SCROLL TOP
+===================================== */
+
+.scroll-top{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:var(--shadow-lg);
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:var(--transition);
+
+    z-index:90;
+
+}
+
+.scroll-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* =====================================
+   UTILITIES
+===================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.show{
+
+    display:block !important;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.flex-between{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.flex-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.w-100{
+
+    width:100%;
+
+}
+
+.h-100{
+
+    height:100%;
+
+}
+
+.mt-8{margin-top:8px;}
+.mt-12{margin-top:12px;}
+.mt-16{margin-top:16px;}
+.mt-20{margin-top:20px;}
+.mt-24{margin-top:24px;}
+.mt-32{margin-top:32px;}
+
+.mb-8{margin-bottom:8px;}
+.mb-12{margin-bottom:12px;}
+.mb-16{margin-bottom:16px;}
+.mb-20{margin-bottom:20px;}
+.mb-24{margin-bottom:24px;}
+.mb-32{margin-bottom:32px;}
+
+.p-16{padding:16px;}
+.p-20{padding:20px;}
+.p-24{padding:24px;}
+
+.round{
+
+    border-radius:50%;
+
+}
+
+.shadow{
+
+    box-shadow:var(--shadow-card);
+
+}
+
+.bg-white{
+
+    background:#fff;
+
+}
+
+/* =====================================
+   FADE
+===================================== */
+
+.fade-up{
+
+    animation:fadeUp .5s ease both;
+
+}
+
+.fade{
+
+    animation:fade .4s ease both;
+
+}
+
+.grow{
+
+    animation:grow .8s ease;
+
+}
+
+.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+/* =====================================
+   SELECTION
+===================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* =====================================
+   END
+===================================== */

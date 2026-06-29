@@ -1,0 +1,642 @@
+/* ==========================================================
+   Finance Dashboard
+   File : css/chart.css
+   Part : 1/2
+   Description : Charts & Statistics
+   ========================================================== */
+
+
+/* =====================================
+   CHART SECTION
+===================================== */
+
+.chart-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+
+/* =====================================
+   CHART WRAPPER
+===================================== */
+
+.chart-wrapper{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   CHART CONTAINER
+===================================== */
+
+.chart-container{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:420px;
+
+}
+
+.chart-container.sm{
+
+    min-height:260px;
+
+}
+
+.chart-container.md{
+
+    min-height:340px;
+
+}
+
+.chart-container.lg{
+
+    min-height:500px;
+
+}
+
+.chart-container canvas{
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+
+/* =====================================
+   CHART TOOLBAR
+===================================== */
+
+.chart-toolbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+.chart-toolbar__left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.chart-toolbar__right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+/* =====================================
+   LEGEND
+===================================== */
+
+.chart-legend{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.chart-legend__item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:.82rem;
+
+    color:var(--text-light);
+
+}
+
+.chart-legend__color{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.chart-income{
+
+    background:var(--chart-income);
+
+}
+
+.chart-expense{
+
+    background:var(--chart-expense);
+
+}
+
+.chart-balance{
+
+    background:var(--chart-balance);
+
+}
+
+
+/* =====================================
+   CHART SUMMARY
+===================================== */
+
+.chart-summary{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.chart-summary__item{
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:var(--surface-alt);
+
+    border:1px solid var(--border);
+
+}
+
+.chart-summary__label{
+
+    font-size:.78rem;
+
+    color:var(--text-muted);
+
+}
+
+.chart-summary__value{
+
+    margin-top:8px;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   CHART INFO
+===================================== */
+
+.chart-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.chart-info__left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.chart-info__title{
+
+    font-weight:700;
+
+}
+
+.chart-info__subtitle{
+
+    color:var(--text-muted);
+
+    font-size:.82rem;
+
+}
+
+
+/* =====================================
+   MINI STATS
+===================================== */
+
+.chart-mini-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+
+}
+
+.chart-mini-stat{
+
+    padding:16px;
+
+    border-radius:16px;
+
+    background:var(--surface-alt);
+
+}
+
+.chart-mini-stat__title{
+
+    color:var(--text-muted);
+
+    font-size:.78rem;
+
+}
+
+.chart-mini-stat__value{
+
+    margin-top:8px;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   CHART EMPTY
+===================================== */
+
+.chart-empty{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:360px;
+
+    text-align:center;
+
+    gap:18px;
+
+}
+
+.chart-empty__icon{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:var(--surface-alt);
+
+    color:var(--text-muted);
+
+}
+
+.chart-empty__icon .material-symbols-outlined{
+
+    font-size:40px;
+
+}
+
+.chart-empty__title{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+.chart-empty__description{
+
+    max-width:360px;
+
+    color:var(--text-muted);
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   Finance Dashboard
+   File : css/chart.css
+   Part : 2/2
+   Description : Chart States & Responsive
+   ========================================================== */
+
+
+/* =====================================
+   CHART LOADING
+===================================== */
+
+.chart-loading{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:16px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(3px);
+
+    border-radius:inherit;
+
+    z-index:5;
+
+}
+
+.chart-loading.hidden{
+
+    display:none;
+
+}
+
+.chart-loading__text{
+
+    font-size:.85rem;
+
+    color:var(--text-light);
+
+}
+
+
+/* =====================================
+   CHART TOOLTIP
+===================================== */
+
+.chart-tooltip{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:14px 16px;
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.chart-tooltip__title{
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.chart-tooltip__value{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   SIDE STATISTIC
+===================================== */
+
+.chart-side-stat{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:14px 0;
+
+}
+
+.chart-side-stat:not(:last-child){
+
+    border-bottom:1px solid var(--border-light);
+
+}
+
+.chart-side-stat__label{
+
+    color:var(--text-light);
+
+    font-size:.82rem;
+
+}
+
+.chart-side-stat__value{
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   CANVAS
+===================================== */
+
+.chart-container canvas{
+
+    transition:opacity .25s ease;
+
+}
+
+.chart-container.loading canvas{
+
+    opacity:.25;
+
+}
+
+
+/* =====================================
+   HOVER CARD
+===================================== */
+
+.chart-card{
+
+    transition:var(--transition);
+
+}
+
+.chart-card:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:1200px){
+
+    .chart-summary{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .chart-toolbar{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .chart-toolbar__right{
+
+        width:100%;
+
+        justify-content:flex-start;
+
+        flex-wrap:wrap;
+
+    }
+
+    .chart-summary{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .chart-mini-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .chart-container{
+
+        min-height:320px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .chart-container{
+
+        min-height:280px;
+
+    }
+
+    .chart-info{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+
+/* =====================================
+   PRINT
+===================================== */
+
+@media print{
+
+    .chart-toolbar{
+
+        display:none;
+
+    }
+
+    .chart-loading{
+
+        display:none !important;
+
+    }
+
+    .chart-container{
+
+        min-height:300px;
+
+    }
+
+}
+
+
+/* =====================================
+   END OF FILE
+===================================== */

@@ -1,0 +1,1103 @@
+/* ==========================================================
+   Finance Dashboard
+   File : css/table.css
+   Part : 1/3
+   Description : Transaction Table
+   ========================================================== */
+
+
+/* =====================================
+   TABLE WRAPPER
+===================================== */
+
+.table-wrapper{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:var(--surface);
+
+    box-shadow:var(--shadow-card);
+
+}
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+.table{
+
+    width:100%;
+
+    min-width:900px;
+
+    border-collapse:collapse;
+
+}
+
+.table thead{
+
+    background:var(--table-head);
+
+}
+
+.table th{
+
+    padding:18px 20px;
+
+    text-align:left;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    color:var(--text-light);
+
+    white-space:nowrap;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.table td{
+
+    padding:18px 20px;
+
+    border-bottom:1px solid var(--border-light);
+
+    vertical-align:middle;
+
+    color:var(--text);
+
+    transition:var(--transition);
+
+}
+
+.table tbody tr{
+
+    transition:var(--transition);
+
+}
+
+.table tbody tr:hover{
+
+    background:var(--table-hover);
+
+}
+
+.table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+
+/* =====================================
+   COLUMN
+===================================== */
+
+.col-date{
+
+    width:140px;
+
+}
+
+.col-category{
+
+    width:180px;
+
+}
+
+.col-description{
+
+    width:auto;
+
+}
+
+.col-type{
+
+    width:120px;
+
+}
+
+.col-amount{
+
+    width:180px;
+
+    text-align:right;
+
+}
+
+
+/* =====================================
+   CATEGORY BADGE
+===================================== */
+
+.category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:var(--surface-alt);
+
+    font-size:.76rem;
+
+    font-weight:700;
+
+}
+
+.category__icon{
+
+    font-size:18px;
+
+}
+
+.category.bensin{
+
+    color:#2563eb;
+
+    background:#dbeafe;
+
+}
+
+.category.tagihan{
+
+    color:#7c3aed;
+
+    background:#ede9fe;
+
+}
+
+.category.jajan{
+
+    color:#ea580c;
+
+    background:#ffedd5;
+
+}
+
+.category.cicilan{
+
+    color:#dc2626;
+
+    background:#fee2e2;
+
+}
+
+.category.lain{
+
+    color:#475569;
+
+    background:#e2e8f0;
+
+}
+
+.category.nafkah{
+
+    color:#15803d;
+
+    background:#dcfce7;
+
+}
+
+
+/* =====================================
+   TRANSACTION TYPE
+===================================== */
+
+.transaction-type{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:96px;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+.transaction-type.income{
+
+    background:var(--success-soft);
+
+    color:var(--success);
+
+}
+
+.transaction-type.expense{
+
+    background:var(--danger-soft);
+
+    color:var(--danger);
+
+}
+
+
+/* =====================================
+   AMOUNT
+===================================== */
+
+.amount{
+
+    font-weight:700;
+
+    text-align:right;
+
+}
+
+.amount.income{
+
+    color:var(--success);
+
+}
+
+.amount.expense{
+
+    color:var(--danger);
+
+}
+
+
+/* =====================================
+   DATE
+===================================== */
+
+.date{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.date strong{
+
+    font-size:.9rem;
+
+}
+
+.date small{
+
+    color:var(--text-muted);
+
+    font-size:.75rem;
+
+}
+
+
+/* =====================================
+   DESCRIPTION
+===================================== */
+
+.description{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.description__title{
+
+    font-weight:600;
+
+}
+
+.description__subtitle{
+
+    font-size:.78rem;
+
+    color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   Finance Dashboard
+   File : css/table.css
+   Part : 2/3
+   Description : Table Header, Filter & Pagination
+   ========================================================== */
+
+
+/* =====================================
+   TABLE HEADER
+===================================== */
+
+.table-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:20px;
+
+}
+
+.table-header__left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.table-header__title{
+
+    font-size:1.05rem;
+
+    font-weight:700;
+
+}
+
+.table-header__subtitle{
+
+    font-size:.82rem;
+
+    color:var(--text-muted);
+
+}
+
+
+/* =====================================
+   TABLE ACTION
+===================================== */
+
+.table-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* =====================================
+   CATEGORY FILTER
+===================================== */
+
+.category-filter{
+
+    min-width:220px;
+
+}
+
+
+/* =====================================
+   SEARCH
+===================================== */
+
+.search-box{
+
+    position:relative;
+
+    width:280px;
+
+    max-width:100%;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    height:48px;
+
+    padding:0 18px 0 48px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    background:#fff;
+
+    transition:var(--transition);
+
+}
+
+.search-box input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.search-box .material-symbols-outlined{
+
+    position:absolute;
+
+    left:16px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--text-muted);
+
+}
+
+
+/* =====================================
+   STICKY HEADER
+===================================== */
+
+.table-sticky thead{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:20;
+
+}
+
+
+/* =====================================
+   ROW STATES
+===================================== */
+
+.table tbody tr.selected{
+
+    background:var(--primary-soft);
+
+}
+
+.table tbody tr.selected td{
+
+    color:var(--primary);
+
+}
+
+.table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+
+/* =====================================
+   EMPTY TABLE
+===================================== */
+
+.table-empty{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    gap:18px;
+
+}
+
+.table-empty__icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:24px;
+
+    background:var(--surface-alt);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:var(--text-muted);
+
+}
+
+.table-empty__icon .material-symbols-outlined{
+
+    font-size:42px;
+
+}
+
+.table-empty__title{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+.table-empty__description{
+
+    max-width:360px;
+
+    color:var(--text-muted);
+
+}
+
+
+/* =====================================
+   LOADING TABLE
+===================================== */
+
+.table-loading{
+
+    padding:20px;
+
+}
+
+.table-loading-row{
+
+    display:grid;
+
+    grid-template-columns:
+        120px
+        160px
+        1fr
+        140px
+        140px;
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+.table-loading-cell{
+
+    height:18px;
+
+    border-radius:8px;
+
+    background:#e2e8f0;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.table-loading-cell::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.65),
+
+        transparent
+
+    );
+
+    animation:skeleton 1.2s infinite;
+
+}
+
+
+/* =====================================
+   PAGINATION
+===================================== */
+
+.table-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding-top:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.table-info{
+
+    color:var(--text-muted);
+
+    font-size:.82rem;
+
+}
+
+.table-pagination{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.page-button{
+
+    min-width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:var(--surface-alt);
+
+    color:var(--text);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.page-button:hover{
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+}
+
+.page-button.active{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/* =====================================
+   MORE BUTTON
+===================================== */
+
+.show-more{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.show-more:hover{
+
+    gap:12px;
+
+  }
+
+/* ==========================================================
+   Finance Dashboard
+   File : css/table.css
+   Part : 3/3
+   Description : Responsive & Mobile Table
+   ========================================================== */
+
+
+/* =====================================
+   TABLE RESPONSIVE
+===================================== */
+
+.table-responsive{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    -webkit-overflow-scrolling:touch;
+
+}
+
+
+/* =====================================
+   SCROLL INDICATOR
+===================================== */
+
+.table-scroll-indicator{
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-bottom:14px;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+}
+
+.table-scroll-indicator
+.material-symbols-outlined{
+
+    font-size:18px;
+
+}
+
+
+/* =====================================
+   MOBILE CARD
+===================================== */
+
+.mobile-transaction{
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.mobile-transaction-card{
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:18px;
+
+    box-shadow:var(--shadow-card);
+
+    transition:var(--transition);
+
+}
+
+.mobile-transaction-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.mobile-transaction-card__top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+    margin-bottom:16px;
+
+}
+
+.mobile-transaction-card__body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.mobile-transaction-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.mobile-transaction-label{
+
+    color:var(--text-muted);
+
+    font-size:.8rem;
+
+}
+
+.mobile-transaction-value{
+
+    font-weight:600;
+
+    text-align:right;
+
+}
+
+
+/* =====================================
+   MOBILE AMOUNT
+===================================== */
+
+.mobile-amount{
+
+    font-size:1.2rem;
+
+    font-weight:800;
+
+}
+
+.mobile-amount.income{
+
+    color:var(--success);
+
+}
+
+.mobile-amount.expense{
+
+    color:var(--danger);
+
+}
+
+
+/* =====================================
+   TABLE ACTION
+===================================== */
+
+.table-actions-mobile{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:18px;
+
+}
+
+
+/* =====================================
+   TABLE HELPER
+===================================== */
+
+.table-note{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:14px;
+
+    color:var(--text-muted);
+
+    font-size:.78rem;
+
+}
+
+.table-note
+.material-symbols-outlined{
+
+    font-size:18px;
+
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:992px){
+
+    .table{
+
+        min-width:760px;
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .table-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .table-actions{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .search-box{
+
+        width:100%;
+
+    }
+
+    .category-filter{
+
+        width:100%;
+
+    }
+
+}
+
+
+@media (max-width:640px){
+
+    .table-wrapper{
+
+        display:none;
+
+    }
+
+    .mobile-transaction{
+
+        display:flex;
+
+    }
+
+    .table-scroll-indicator{
+
+        display:none;
+
+    }
+
+}
+
+
+@media (min-width:641px){
+
+    .mobile-transaction{
+
+        display:none !important;
+
+    }
+
+}
+
+
+/* =====================================
+   PRINT
+===================================== */
+
+@media print{
+
+    .table-wrapper{
+
+        overflow:visible;
+
+        box-shadow:none;
+
+        border:1px solid #ddd;
+
+    }
+
+    .table{
+
+        min-width:100%;
+
+    }
+
+    .table th{
+
+        background:#f3f4f6 !important;
+
+        color:#000;
+
+    }
+
+    .mobile-transaction{
+
+        display:none !important;
+
+    }
+
+    .table-footer{
+
+        display:none;
+
+    }
+
+}
+
+
+/* =====================================
+   END OF FILE
+===================================== */

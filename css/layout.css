@@ -1,0 +1,1513 @@
+/* ==========================================================
+   Finance Dashboard
+   File : css/layout.css
+   Part : 1/3
+   Description : Global Layout System
+   ========================================================== */
+
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.container{
+
+    width:100%;
+
+    max-width:1280px;
+
+    margin:0 auto;
+
+    padding:24px;
+
+}
+
+.container-fluid{
+
+    width:100%;
+
+    padding:24px;
+
+}
+
+
+/* =====================================
+   PAGE
+===================================== */
+
+.page{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    min-height:100vh;
+
+}
+
+
+/* =====================================
+   CONTENT
+===================================== */
+
+.page-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+
+/* =====================================
+   SECTION
+===================================== */
+
+.section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   SECTION BODY
+===================================== */
+
+.section-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   GRID
+===================================== */
+
+.grid{
+
+    display:grid;
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   SUMMARY GRID
+===================================== */
+
+.summary-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   QUICK SUMMARY
+===================================== */
+
+.quick-summary-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+/* =====================================
+   STATISTIC GRID
+===================================== */
+
+.statistic-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   CHART GRID
+===================================== */
+
+.chart-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        2fr 1fr;
+
+    gap:24px;
+
+}
+
+
+/* =====================================
+   PLANNING
+===================================== */
+
+.planning-layout{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+
+.planning-summary{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+.planning-progress{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+
+.planning-category{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   TABLE
+===================================== */
+
+.transaction-layout{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+.transaction-filter{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.transaction-filter-right{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+
+/* =====================================
+   INSIGHT
+===================================== */
+
+.insight-layout{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer-layout{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* =====================================
+   FLEX
+===================================== */
+
+.flex{
+
+    display:flex;
+
+}
+
+
+.flex-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.flex-center{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+.flex-between{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.flex-around{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-around;
+
+}
+
+
+.flex-end{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+
+.flex-start{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+}
+
+
+.flex-wrap{
+
+    flex-wrap:wrap;
+
+}
+
+
+.align-center{
+
+    align-items:center;
+
+}
+
+
+.align-start{
+
+    align-items:flex-start;
+
+}
+
+
+.align-end{
+
+    align-items:flex-end;
+
+}
+
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+
+.justify-end{
+
+    justify-content:flex-end;
+
+}
+
+
+/* =====================================
+   GAP
+===================================== */
+
+.gap-8{
+
+    gap:8px;
+
+}
+
+.gap-12{
+
+    gap:12px;
+
+}
+
+.gap-16{
+
+    gap:16px;
+
+}
+
+.gap-20{
+
+    gap:20px;
+
+}
+
+.gap-24{
+
+    gap:24px;
+
+}
+
+.gap-32{
+
+    gap:32px;
+
+}
+
+.gap-40{
+
+    gap:40px;
+
+}
+
+
+/* =====================================
+   WIDTH
+===================================== */
+
+.w-25{
+
+    width:25%;
+
+}
+
+.w-33{
+
+    width:33.333%;
+
+}
+
+.w-50{
+
+    width:50%;
+
+}
+
+.w-75{
+
+    width:75%;
+
+}
+
+.w-100{
+
+    width:100%;
+
+}
+
+
+/* =====================================
+   HEIGHT
+===================================== */
+
+.h-100{
+
+    height:100%;
+
+}
+
+.min-h-screen{
+
+    min-height:100vh;
+
+}
+
+
+/* =====================================
+   CARD GROUP
+===================================== */
+
+.card-group{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   CHART GROUP
+===================================== */
+
+.chart-group{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(380px,1fr));
+
+    gap:24px;
+
+}
+/* ==========================================================
+   Finance Dashboard
+   File : css/layout.css
+   Part : 2/3
+   Description : Layout Components
+   ========================================================== */
+
+
+/* =====================================
+   HEADER LAYOUT
+===================================== */
+
+.dashboard-header{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.dashboard-header-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.dashboard-header-left{
+
+    flex:1;
+
+    min-width:280px;
+
+}
+
+.dashboard-header-right{
+
+    width:340px;
+
+    max-width:100%;
+
+}
+
+
+/* =====================================
+   GREETING
+===================================== */
+
+.greeting{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.greeting-title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.greeting-title h1{
+
+    margin:0;
+
+}
+
+.greeting-description{
+
+    max-width:620px;
+
+}
+
+
+/* =====================================
+   DASHBOARD MONTH
+===================================== */
+
+.dashboard-month-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.dashboard-month-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.dashboard-month-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+/* =====================================
+   STICKY FILTER
+===================================== */
+
+.dashboard-month-sticky{
+
+    position:sticky;
+
+    top:18px;
+
+    z-index:var(--z-header);
+
+}
+
+
+/* =====================================
+   REMINDER
+===================================== */
+
+.reminder-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.reminder-content{
+
+    flex:1;
+
+    overflow:hidden;
+
+}
+
+
+/* =====================================
+   SUMMARY
+===================================== */
+
+.summary-wrapper{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   QUICK SUMMARY
+===================================== */
+
+.quick-summary-wrapper{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   CHART
+===================================== */
+
+.chart-wrapper{
+
+    display:grid;
+
+    grid-template-columns:
+
+        2fr 1fr;
+
+    gap:24px;
+
+}
+
+.chart-main{
+
+    min-height:420px;
+
+}
+
+.chart-side{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   STATISTIC
+===================================== */
+
+.statistic-wrapper{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.statistic-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   PLANNING
+===================================== */
+
+.planning-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.planning-top{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.planning-progress-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.planning-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   INSIGHT
+===================================== */
+
+.insight-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/* =====================================
+   TRANSACTION
+===================================== */
+
+.transaction-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.transaction-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.transaction-filter{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.transaction-table{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+
+/* =====================================
+   TABLE SCROLL
+===================================== */
+
+.table-scroll{
+
+    overflow:auto;
+
+    width:100%;
+
+}
+
+
+/* =====================================
+   SCROLL AREA
+===================================== */
+
+.scroll-area{
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+}
+
+.scroll-area-sm{
+
+    max-height:280px;
+
+}
+
+.scroll-area-md{
+
+    max-height:450px;
+
+}
+
+.scroll-area-lg{
+
+    max-height:700px;
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+
+.footer-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.footer-right{
+
+    text-align:right;
+
+}
+
+
+/* =====================================
+   DIVIDER
+===================================== */
+
+.divider-horizontal{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+}
+
+.divider-vertical{
+
+    width:1px;
+
+    background:var(--border);
+
+}
+
+
+/* =====================================
+   AUTO GRID
+===================================== */
+
+.grid-auto-200{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(200px,1fr));
+
+    gap:20px;
+
+}
+
+.grid-auto-250{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.grid-auto-300{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+
+}
+
+.grid-auto-350{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(350px,1fr));
+
+    gap:24px;
+
+}
+/* ==========================================================
+   Finance Dashboard
+   File : css/layout.css
+   Part : 3/3
+   Description : Utility Layout & Responsive Foundation
+   ========================================================== */
+
+
+/* =====================================
+   DISPLAY
+===================================== */
+
+.d-block{
+
+    display:block;
+
+}
+
+.d-inline{
+
+    display:inline-block;
+
+}
+
+.d-flex{
+
+    display:flex;
+
+}
+
+.d-grid{
+
+    display:grid;
+
+}
+
+.d-none{
+
+    display:none;
+
+}
+
+
+/* =====================================
+   POSITION
+===================================== */
+
+.relative{
+
+    position:relative;
+
+}
+
+.absolute{
+
+    position:absolute;
+
+}
+
+.fixed{
+
+    position:fixed;
+
+}
+
+.sticky{
+
+    position:sticky;
+
+}
+
+.top-0{
+
+    top:0;
+
+}
+
+.left-0{
+
+    left:0;
+
+}
+
+.right-0{
+
+    right:0;
+
+}
+
+.bottom-0{
+
+    bottom:0;
+
+}
+
+
+/* =====================================
+   OVERFLOW
+===================================== */
+
+.overflow-hidden{
+
+    overflow:hidden;
+
+}
+
+.overflow-auto{
+
+    overflow:auto;
+
+}
+
+.overflow-x{
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+}
+
+.overflow-y{
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =====================================
+   ORDER
+===================================== */
+
+.order-1{
+
+    order:1;
+
+}
+
+.order-2{
+
+    order:2;
+
+}
+
+.order-3{
+
+    order:3;
+
+}
+
+.order-4{
+
+    order:4;
+
+}
+
+
+/* =====================================
+   FLEX GROW
+===================================== */
+
+.flex-1{
+
+    flex:1;
+
+}
+
+.flex-auto{
+
+    flex:auto;
+
+}
+
+.flex-none{
+
+    flex:none;
+
+}
+
+
+/* =====================================
+   MAX WIDTH
+===================================== */
+
+.max-480{
+
+    max-width:480px;
+
+}
+
+.max-640{
+
+    max-width:640px;
+
+}
+
+.max-768{
+
+    max-width:768px;
+
+}
+
+.max-1024{
+
+    max-width:1024px;
+
+}
+
+.max-full{
+
+    max-width:100%;
+
+}
+
+
+/* =====================================
+   PADDING
+===================================== */
+
+.px-16{
+
+    padding-left:16px;
+
+    padding-right:16px;
+
+}
+
+.px-24{
+
+    padding-left:24px;
+
+    padding-right:24px;
+
+}
+
+.py-16{
+
+    padding-top:16px;
+
+    padding-bottom:16px;
+
+}
+
+.py-24{
+
+    padding-top:24px;
+
+    padding-bottom:24px;
+
+}
+
+
+/* =====================================
+   MARGIN AUTO
+===================================== */
+
+.mx-auto{
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+}
+
+.ml-auto{
+
+    margin-left:auto;
+
+}
+
+.mr-auto{
+
+    margin-right:auto;
+
+}
+
+
+/* =====================================
+   RESPONSIVE FOUNDATION
+===================================== */
+
+@media (max-width:1200px){
+
+    .summary-grid,
+    .planning-summary{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .chart-wrapper{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media (max-width:992px){
+
+    .statistic-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .planning-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .dashboard-header-top{
+
+        flex-direction:column;
+
+    }
+
+    .dashboard-header-right{
+
+        width:100%;
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    .container{
+
+        padding:16px;
+
+    }
+
+    .summary-grid,
+    .quick-summary-grid,
+    .planning-summary{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .transaction-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .transaction-filter{
+
+        width:100%;
+
+    }
+
+    .footer-wrapper{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .page{
+
+        gap:18px;
+
+    }
+
+    .section{
+
+        gap:16px;
+
+    }
+
+    .section-body{
+
+        gap:16px;
+
+    }
+
+}
+
+
+/* =====================================
+   PRINT
+===================================== */
+
+@media print{
+
+    .dashboard-month-sticky,
+    .scroll-top,
+    .transaction-filter,
+    button{
+
+        display:none !important;
+
+    }
+
+    body{
+
+        background:#fff;
+
+    }
+
+    .section{
+
+        box-shadow:none;
+
+        border:1px solid #ddd;
+
+        break-inside:avoid;
+
+    }
+
+}
+
+
+/* =====================================
+   END OF FILE
+===================================== */

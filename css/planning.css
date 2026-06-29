@@ -1,0 +1,1129 @@
+/* ==========================================================
+   Finance Dashboard
+   File : css/planning.css
+   Part : 1/3
+   Description : Planning Section
+   ========================================================== */
+
+
+/* =====================================
+   PLANNING WRAPPER
+===================================== */
+
+.planning{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+
+/* =====================================
+   BUDGET OVERVIEW
+===================================== */
+
+.budget-overview{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   BUDGET MAIN
+===================================== */
+
+.budget-main{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:#fff;
+
+}
+
+.budget-main::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:-70px;
+
+    top:-70px;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.budget-main::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-40px;
+
+    bottom:-40px;
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.budget-main>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.budget-main small{
+
+    color:rgba(255,255,255,.82);
+
+}
+
+.budget-main h2{
+
+    margin-top:12px;
+
+    font-size:2.4rem;
+
+    color:#fff;
+
+}
+
+.budget-main p{
+
+    margin-top:10px;
+
+    color:rgba(255,255,255,.9);
+
+}
+
+
+/* =====================================
+   BUDGET PROGRESS
+===================================== */
+
+.budget-progress{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.budget-progress .progress{
+
+    height:18px;
+
+}
+
+.budget-progress .progress-bar{
+
+    transition:width 1.2s ease;
+
+}
+
+.budget-progress-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.budget-progress-info strong{
+
+    font-size:1.3rem;
+
+}
+
+
+/* =====================================
+   PLANNING VALIDATION
+===================================== */
+
+.planning-validation{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:var(--surface-alt);
+
+    border:1px solid var(--border);
+
+}
+
+.planning-validation__icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+}
+
+.planning-validation__content{
+
+    flex:1;
+
+}
+
+.planning-validation__title{
+
+    font-weight:700;
+
+}
+
+.planning-validation__message{
+
+    margin-top:6px;
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================
+   CATEGORY GRID
+===================================== */
+
+.planning-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap:20px;
+
+}
+
+
+/* =====================================
+   CATEGORY CARD
+===================================== */
+
+.planning-item{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.planning-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+.planning-item__header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+}
+
+.planning-item__title{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.planning-item__icon{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+}
+
+.planning-item__name{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+.planning-item__budget{
+
+    text-align:right;
+
+}
+
+.planning-item__budget strong{
+
+    font-size:1.15rem;
+
+}
+/* ==========================================================
+   Finance Dashboard
+   File : css/planning.css
+   Part : 2/3
+   Description : Planning Progress & Status
+   ========================================================== */
+
+
+/* =====================================
+   PLANNING VALUE
+===================================== */
+
+.planning-item__amount{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.planning-item__used{
+
+    font-size:1.55rem;
+
+    font-weight:800;
+
+    color:var(--text);
+
+}
+
+.planning-item__total{
+
+    font-size:.82rem;
+
+    color:var(--text-muted);
+
+}
+
+
+/* =====================================
+   PROGRESS
+===================================== */
+
+.planning-progress{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.planning-progress .progress{
+
+    height:14px;
+
+    background:var(--border-light);
+
+}
+
+.planning-progress .progress-bar{
+
+    width:0;
+
+    transition:width 1s ease;
+
+}
+
+
+/* =====================================
+   PROGRESS FOOTER
+===================================== */
+
+.planning-progress__footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+    font-size:.82rem;
+
+}
+
+.planning-progress__footer span{
+
+    color:var(--text-light);
+
+}
+
+.planning-progress__footer strong{
+
+    color:var(--text);
+
+}
+
+
+/* =====================================
+   BUDGET REMAIN
+===================================== */
+
+.planning-remaining{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    background:var(--surface-alt);
+
+}
+
+.planning-remaining__label{
+
+    font-size:.82rem;
+
+    color:var(--text-light);
+
+}
+
+.planning-remaining__value{
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+
+/* =====================================
+   STATUS
+===================================== */
+
+.planning-status{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.planning-status__badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+.planning-status__percent{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   SAFE
+===================================== */
+
+.planning-item.is-safe{
+
+    border-top:5px solid var(--planning-safe);
+
+}
+
+.planning-item.is-safe .planning-item__icon{
+
+    background:var(--success-soft);
+
+    color:var(--success);
+
+}
+
+.planning-item.is-safe .planning-progress .progress-bar{
+
+    background:var(--planning-safe);
+
+}
+
+.planning-item.is-safe .planning-status__badge{
+
+    background:var(--success-soft);
+
+    color:var(--success);
+
+}
+
+
+/* =====================================
+   WARNING
+===================================== */
+
+.planning-item.is-warning{
+
+    border-top:5px solid var(--planning-warning);
+
+}
+
+.planning-item.is-warning .planning-item__icon{
+
+    background:var(--warning-soft);
+
+    color:var(--warning);
+
+}
+
+.planning-item.is-warning .planning-progress .progress-bar{
+
+    background:var(--planning-warning);
+
+}
+
+.planning-item.is-warning .planning-status__badge{
+
+    background:var(--warning-soft);
+
+    color:var(--warning);
+
+}
+
+
+/* =====================================
+   DANGER
+===================================== */
+
+.planning-item.is-danger{
+
+    border-top:5px solid var(--planning-danger);
+
+}
+
+.planning-item.is-danger .planning-item__icon{
+
+    background:var(--danger-soft);
+
+    color:var(--danger);
+
+}
+
+.planning-item.is-danger .planning-progress .progress-bar{
+
+    background:var(--planning-danger);
+
+}
+
+.planning-item.is-danger .planning-status__badge{
+
+    background:var(--danger-soft);
+
+    color:var(--danger);
+
+}
+
+
+/* =====================================
+   OVER BUDGET
+===================================== */
+
+.planning-item.is-over{
+
+    border-top:5px solid #991b1b;
+
+    animation:budgetAlert 2s infinite;
+
+}
+
+.planning-item.is-over .planning-item__icon{
+
+    background:#fee2e2;
+
+    color:#991b1b;
+
+}
+
+.planning-item.is-over .planning-progress .progress-bar{
+
+    background:#991b1b;
+
+}
+
+.planning-item.is-over .planning-status__badge{
+
+    background:#991b1b;
+
+    color:#fff;
+
+}
+
+@keyframes budgetAlert{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(239,68,68,.0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 22px rgba(239,68,68,.18);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(239,68,68,.0);
+
+    }
+
+}
+
+
+/* =====================================
+   CATEGORY FOOTER
+===================================== */
+
+.planning-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:auto;
+
+    padding-top:16px;
+
+    border-top:1px solid var(--border-light);
+
+}
+
+.planning-footer__left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:4px;
+
+}
+
+.planning-footer__label{
+
+    font-size:.76rem;
+
+    color:var(--text-muted);
+
+}
+
+.planning-footer__value{
+
+    font-weight:700;
+
+}
+
+.planning-footer__action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.planning-footer__action:hover{
+
+    opacity:.75;
+
+  }
+
+/* ==========================================================
+   Finance Dashboard
+   File : css/planning.css
+   Part : 3/3
+   Description : Planning States & Responsive
+   ========================================================== */
+
+
+/* =====================================
+   WAITING SALARY
+===================================== */
+
+.waiting-salary{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    padding:26px;
+
+    border-radius:24px;
+
+    border:2px dashed var(--border);
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fafc
+    );
+
+}
+
+.waiting-salary__icon{
+
+    width:72px;
+
+    height:72px;
+
+    flex-shrink:0;
+
+    border-radius:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--warning-soft);
+
+    color:var(--warning);
+
+}
+
+.waiting-salary__icon .material-symbols-outlined{
+
+    font-size:36px;
+
+}
+
+.waiting-salary__content{
+
+    flex:1;
+
+}
+
+.waiting-salary__title{
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+}
+
+.waiting-salary__description{
+
+    margin-top:8px;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+
+/* =====================================
+   EMPTY PLANNING
+===================================== */
+
+.planning-empty{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    gap:18px;
+
+    padding:60px 24px;
+
+    border:2px dashed var(--border);
+
+    border-radius:24px;
+
+}
+
+.planning-empty__icon{
+
+    width:80px;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:24px;
+
+    background:var(--surface-alt);
+
+    color:var(--text-muted);
+
+}
+
+.planning-empty__icon .material-symbols-outlined{
+
+    font-size:42px;
+
+}
+
+.planning-empty__title{
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+}
+
+.planning-empty__description{
+
+    max-width:420px;
+
+    color:var(--text-muted);
+
+    line-height:1.8;
+
+}
+
+
+/* =====================================
+   BUDGET HEALTH
+===================================== */
+
+.budget-health{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:18px;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    background:var(--surface-alt);
+
+    border:1px solid var(--border);
+
+}
+
+.budget-health__left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.budget-health__icon{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--success-soft);
+
+    color:var(--success);
+
+}
+
+.budget-health__title{
+
+    font-weight:700;
+
+}
+
+.budget-health__subtitle{
+
+    margin-top:4px;
+
+    font-size:.82rem;
+
+    color:var(--text-muted);
+
+}
+
+.budget-health__score{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+}
+
+
+/* =====================================
+   TOTAL SUMMARY
+===================================== */
+
+.planning-total{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.planning-total__item{
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:var(--surface-alt);
+
+    border:1px solid var(--border);
+
+}
+
+.planning-total__label{
+
+    font-size:.8rem;
+
+    color:var(--text-light);
+
+}
+
+.planning-total__value{
+
+    margin-top:8px;
+
+    font-size:1.45rem;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width:1200px){
+
+    .budget-overview{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .budget-overview{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .planning-total{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .waiting-salary{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .budget-health{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .planning-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .planning-item{
+
+        padding:18px;
+
+    }
+
+    .budget-main{
+
+        padding:22px;
+
+    }
+
+    .budget-main h2{
+
+        font-size:2rem;
+
+    }
+
+}
+
+
+/* =====================================
+   END OF FILE
+===================================== */

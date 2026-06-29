@@ -1,0 +1,1391 @@
+/* ==========================================================
+   Finance Dashboard
+   File : css/components.css
+   Part : 1/3
+   Description : Reusable Components
+   ========================================================== */
+
+
+/* =====================================
+   SECTION BADGE
+===================================== */
+
+.section-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+    font-size:.78rem;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+.section-badge .material-symbols-outlined{
+
+    font-size:18px;
+
+}
+
+
+/* =====================================
+   ICON CHIP
+===================================== */
+
+.icon-chip{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:var(--surface-alt);
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+}
+
+
+/* =====================================
+   STATUS CHIP
+===================================== */
+
+.status-chip{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+}
+
+.status-chip.safe{
+
+    background:var(--success-soft);
+
+    color:var(--success);
+
+}
+
+.status-chip.warning{
+
+    background:var(--warning-soft);
+
+    color:var(--warning);
+
+}
+
+.status-chip.danger{
+
+    background:var(--danger-soft);
+
+    color:var(--danger);
+
+}
+
+.status-chip.info{
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+}
+
+
+/* =====================================
+   DASHBOARD SELECT
+===================================== */
+
+.select-box{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:260px;
+
+}
+
+.select-box select{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 48px 0 18px;
+
+    border-radius:16px;
+
+    border:1px solid var(--border);
+
+    background:#fff;
+
+    font-size:.9rem;
+
+    color:var(--text);
+
+    appearance:none;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.select-box select:hover{
+
+    border-color:var(--primary);
+
+}
+
+.select-box select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.select-box::after{
+
+    content:"expand_more";
+
+    font-family:"Material Symbols Outlined";
+
+    position:absolute;
+
+    right:16px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:var(--text-muted);
+
+    pointer-events:none;
+
+}
+
+
+/* =====================================
+   FILTER GROUP
+===================================== */
+
+.filter-group{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    align-items:center;
+
+}
+
+.filter-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.filter-item label{
+
+    font-size:.78rem;
+
+    color:var(--text-light);
+
+    font-weight:600;
+
+}
+
+
+/* =====================================
+   PROGRESS BAR
+===================================== */
+
+.progress{
+
+    width:100%;
+
+    height:12px;
+
+    background:var(--border-light);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.progress-sm{
+
+    height:8px;
+
+}
+
+.progress-lg{
+
+    height:16px;
+
+}
+
+.progress-bar{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:999px;
+
+    transition:width .9s ease;
+
+}
+
+.progress-bar.safe{
+
+    background:var(--planning-safe);
+
+}
+
+.progress-bar.warning{
+
+    background:var(--planning-warning);
+
+}
+
+.progress-bar.danger{
+
+    background:var(--planning-danger);
+
+}
+
+
+/* =====================================
+   PROGRESS INFO
+===================================== */
+
+.progress-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:10px;
+
+    font-size:.82rem;
+
+}
+
+.progress-info span{
+
+    color:var(--text-light);
+
+}
+
+.progress-percent{
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   BUDGET STATUS
+===================================== */
+
+.budget-status{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:12px;
+
+}
+
+.budget-status__left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.budget-status__right{
+
+    text-align:right;
+
+}
+
+.budget-status__title{
+
+    font-size:.82rem;
+
+    color:var(--text-light);
+
+}
+
+.budget-status__value{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+}
+
+/* ==========================================================
+   Finance Dashboard
+   File : css/components.css
+   Part : 2/3
+   Description : Marquee, Insight & Reusable Components
+   ========================================================== */
+
+
+/* =====================================
+   REMINDER MARQUEE
+===================================== */
+
+.marquee{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    background:var(--surface);
+
+    padding:14px 0;
+
+}
+
+.marquee-track{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    white-space:nowrap;
+
+    will-change:transform;
+
+    animation:marquee-scroll 28s linear infinite;
+
+}
+
+.marquee:hover .marquee-track{
+
+    animation-play-state:paused;
+
+}
+
+@keyframes marquee-scroll{
+
+    from{
+
+        transform:translateX(100%);
+
+    }
+
+    to{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+.marquee-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:0 8px;
+
+    color:var(--text-light);
+
+    font-size:.9rem;
+
+    font-weight:500;
+
+}
+
+.marquee-item .material-symbols-outlined{
+
+    color:var(--warning);
+
+    font-size:20px;
+
+}
+
+
+/* =====================================
+   TIMELINE ITEM
+===================================== */
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.timeline-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:14px;
+
+}
+
+.timeline-dot{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+    margin-top:4px;
+
+    flex-shrink:0;
+
+}
+
+.timeline-dot.safe{
+
+    background:var(--success);
+
+}
+
+.timeline-dot.warning{
+
+    background:var(--warning);
+
+}
+
+.timeline-dot.danger{
+
+    background:var(--danger);
+
+}
+
+.timeline-content{
+
+    flex:1;
+
+}
+
+.timeline-title{
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+}
+
+.timeline-description{
+
+    margin-top:4px;
+
+    font-size:.82rem;
+
+    color:var(--text-muted);
+
+}
+
+
+/* =====================================
+   INSIGHT BOX
+===================================== */
+
+.insight-box{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:var(--surface-alt);
+
+    border:1px solid var(--border);
+
+}
+
+.insight-box__icon{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+    flex-shrink:0;
+
+}
+
+.insight-box__content{
+
+    flex:1;
+
+}
+
+.insight-box__title{
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+}
+
+.insight-box__description{
+
+    margin-top:8px;
+
+    color:var(--text-light);
+
+    line-height:1.75;
+
+}
+
+
+/* =====================================
+   QUOTE BOX
+===================================== */
+
+.quote-box{
+
+    position:relative;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #2563eb,
+
+        #3b82f6
+
+    );
+
+    overflow:hidden;
+
+}
+
+.quote-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    right:-60px;
+
+    top:-60px;
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.quote-box p{
+
+    position:relative;
+
+    color:#fff;
+
+    line-height:1.8;
+
+    font-weight:500;
+
+}
+
+.quote-box small{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:rgba(255,255,255,.85);
+
+}
+
+
+/* =====================================
+   LEGEND
+===================================== */
+
+.legend{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.legend-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:.82rem;
+
+    color:var(--text-light);
+
+}
+
+.legend-color{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.legend-income{
+
+    background:var(--chart-income);
+
+}
+
+.legend-expense{
+
+    background:var(--chart-expense);
+
+}
+
+.legend-balance{
+
+    background:var(--chart-balance);
+
+}
+
+
+/* =====================================
+   LAST SYNC
+===================================== */
+
+.last-sync{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 14px;
+
+    border-radius:999px;
+
+    background:var(--surface-alt);
+
+    border:1px solid var(--border);
+
+    font-size:.8rem;
+
+    color:var(--text-light);
+
+}
+
+.last-sync .material-symbols-outlined{
+
+    font-size:18px;
+
+    color:var(--success);
+
+}
+
+
+/* =====================================
+   CHIP GROUP
+===================================== */
+
+.chip-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.chip{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:var(--surface-alt);
+
+    color:var(--text-light);
+
+    font-size:.78rem;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.chip:hover{
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+}
+
+.chip.active{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/* =====================================
+   STATISTIC ITEM
+===================================== */
+
+.stat-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+    padding:14px 0;
+
+}
+
+.stat-item:not(:last-child){
+
+    border-bottom:1px solid var(--border-light);
+
+}
+
+.stat-item__label{
+
+    color:var(--text-light);
+
+    font-size:.86rem;
+
+}
+
+.stat-item__value{
+
+    font-weight:700;
+
+    color:var(--text);
+
+}
+
+/* ==========================================================
+   Finance Dashboard
+   File : css/components.css
+   Part : 3/3
+   Description : Helper Components & Utilities
+   ========================================================== */
+
+
+/* =====================================
+   TOOLTIP
+===================================== */
+
+.tooltip{
+
+    position:relative;
+
+    display:inline-flex;
+
+    cursor:pointer;
+
+}
+
+.tooltip::after{
+
+    content:attr(data-tooltip);
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:calc(100% + 10px);
+
+    transform:translateX(-50%) scale(.95);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    min-width:140px;
+
+    max-width:240px;
+
+    padding:10px 14px;
+
+    border-radius:12px;
+
+    background:var(--secondary);
+
+    color:#fff;
+
+    font-size:.75rem;
+
+    line-height:1.5;
+
+    text-align:center;
+
+    transition:var(--transition);
+
+    pointer-events:none;
+
+    z-index:100;
+
+}
+
+.tooltip:hover::after{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(-50%) scale(1);
+
+}
+
+
+/* =====================================
+   NOTIFICATION DOT
+===================================== */
+
+.notification-dot{
+
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--danger);
+
+    border:2px solid #fff;
+
+}
+
+.notification-dot.pulse{
+
+    animation:pulse 2s infinite;
+
+}
+
+
+/* =====================================
+   AVATAR
+===================================== */
+
+.avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+
+    overflow:hidden;
+
+}
+
+.avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+/* =====================================
+   AVATAR GROUP
+===================================== */
+
+.avatar-group{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.avatar-group .avatar{
+
+    margin-left:-10px;
+
+    border:2px solid #fff;
+
+}
+
+.avatar-group .avatar:first-child{
+
+    margin-left:0;
+
+}
+
+
+/* =====================================
+   LOADING OVERLAY
+===================================== */
+
+.loading-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(3px);
+
+    z-index:30;
+
+}
+
+.loading-overlay.hidden{
+
+    display:none;
+
+}
+
+
+/* =====================================
+   FLOATING ACTION BUTTON
+===================================== */
+
+.fab{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:90px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:var(--shadow-lg);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    z-index:120;
+
+}
+
+.fab:hover{
+
+    transform:translateY(-4px);
+
+    background:var(--primary-light);
+
+}
+
+
+/* =====================================
+   STATUS INDICATOR
+===================================== */
+
+.status-indicator{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-size:.82rem;
+
+    font-weight:600;
+
+}
+
+.status-indicator::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+}
+
+.status-indicator.safe::before{
+
+    background:var(--success);
+
+}
+
+.status-indicator.warning::before{
+
+    background:var(--warning);
+
+}
+
+.status-indicator.danger::before{
+
+    background:var(--danger);
+
+}
+
+.status-indicator.info::before{
+
+    background:var(--primary);
+
+}
+
+
+/* =====================================
+   DASHBOARD DIVIDER
+===================================== */
+
+.component-divider{
+
+    width:100%;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:10px 0;
+
+}
+
+
+/* =====================================
+   ICON BUTTON
+===================================== */
+
+.icon-button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:var(--surface-alt);
+
+    color:var(--text-light);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.icon-button:hover{
+
+    background:var(--primary-soft);
+
+    color:var(--primary);
+
+}
+
+
+/* =====================================
+   INFO LIST
+===================================== */
+
+.info-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.info-list li{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:16px;
+
+    list-style:none;
+
+}
+
+.info-list li span{
+
+    color:var(--text-light);
+
+}
+
+.info-list li strong{
+
+    color:var(--text);
+
+}
+
+
+/* =====================================
+   TEXT COLORS
+===================================== */
+
+.text-primary{
+
+    color:var(--primary);
+
+}
+
+.text-success{
+
+    color:var(--success);
+
+}
+
+.text-warning{
+
+    color:var(--warning);
+
+}
+
+.text-danger{
+
+    color:var(--danger);
+
+}
+
+.text-info{
+
+    color:var(--info);
+
+}
+
+.text-muted{
+
+    color:var(--text-muted);
+
+}
+
+
+/* =====================================
+   BACKGROUND HELPERS
+===================================== */
+
+.bg-primary-soft{
+
+    background:var(--primary-soft);
+
+}
+
+.bg-success-soft{
+
+    background:var(--success-soft);
+
+}
+
+.bg-warning-soft{
+
+    background:var(--warning-soft);
+
+}
+
+.bg-danger-soft{
+
+    background:var(--danger-soft);
+
+}
+
+
+/* =====================================
+   BORDER HELPERS
+===================================== */
+
+.border{
+
+    border:1px solid var(--border);
+
+}
+
+.border-top{
+
+    border-top:1px solid var(--border);
+
+}
+
+.border-bottom{
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.border-radius{
+
+    border-radius:var(--radius-lg);
+
+}
+
+
+/* =====================================
+   END OF FILE
+===================================== */
+

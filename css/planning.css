@@ -1,0 +1,471 @@
+/* =====================================================
+   FINANCE DASHBOARD
+   FILE : css/planning.css
+   DESCRIPTION : Planning
+===================================================== */
+
+
+/* =====================================================
+   OVERVIEW
+===================================================== */
+
+.planning-overview{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    padding:18px;
+
+    margin-bottom:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.planning-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:15px;
+
+}
+
+.planning-row span{
+
+    color:var(--text-light);
+
+}
+
+.planning-row strong{
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================================
+   HEALTH
+===================================================== */
+
+.planning-health-row{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.planning-health-title{
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+}
+
+.planning-health-progress{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.planning-health-progress .progress{
+
+    flex:1;
+
+}
+
+#budgetHealth{
+
+    min-width:45px;
+
+    text-align:right;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:var(--success);
+
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress{
+
+    width:100%;
+
+    height:10px;
+
+    background:#E5E7EB;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:999px;
+
+    transition:width .35s ease;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #10B981,
+
+        #34D399
+
+    );
+
+}
+
+/* =====================================================
+   PROGRESS COLOR
+===================================================== */
+
+.progress-bar.safe{
+
+    background:#10B981;
+
+}
+
+.progress-bar.warning{
+
+    background:#F59E0B;
+
+}
+
+.progress-bar.danger{
+
+    background:#EF4444;
+
+}
+
+.progress-bar.over{
+
+    background:#991B1B;
+
+}
+
+
+/* =====================================================
+   PLANNING LIST
+===================================================== */
+
+.planning-list{
+
+    display:grid;
+
+    gap:16px;
+
+}
+
+/* =====================================================
+   PLANNING CATEGORY CARD
+===================================================== */
+
+.planning-card-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:20px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.planning-category-item{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.planning-category-item:not(:last-child){
+
+    padding-bottom:16px;
+
+    border-bottom:1px solid #F1F5F9;
+
+}
+
+.planning-category-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.planning-category-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    color:var(--text-light);
+
+    font-size:13px;
+
+}
+
+
+/* =====================================================
+   PLANNING ITEM
+===================================================== */
+
+.planning-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:18px 20px;
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    background:var(--surface);
+
+    transition:var(--transition);
+
+}
+
+.planning-item:hover{
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+.planning-info{
+
+    flex:1;
+
+}
+
+.planning-info h3{
+
+    font-size:16px;
+
+    margin-bottom:6px;
+
+}
+
+.planning-info p{
+
+    font-size:13px;
+
+    color:var(--text-light);
+
+}
+
+
+/* =====================================================
+   PLANNING VALUE
+===================================================== */
+
+.planning-value{
+
+    text-align:right;
+
+    min-width:120px;
+
+}
+
+.planning-value h4{
+
+    font-size:18px;
+
+    color:var(--primary);
+
+    margin-bottom:4px;
+
+}
+
+.planning-value span{
+
+    font-size:13px;
+
+    color:var(--text-light);
+
+}
+
+
+/* =====================================================
+/* =====================================================
+   PLANNING LIST
+===================================================== */
+
+.planning-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+
+/* =====================================================
+   PLANNING ITEM
+===================================================== */
+
+.planning-item{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:16px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    transition:var(--transition);
+
+}
+
+.planning-item:hover{
+
+    box-shadow:var(--shadow-sm);
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.planning-item-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.planning-category{
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.planning-item-header strong{
+
+    font-size:14px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.planning-item-footer{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:6px;
+
+    font-size:13px;
+
+    color:var(--text-light);
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width:768px){
+
+    .planning-item{
+
+        padding:14px;
+
+    }
+
+    .planning-category{
+
+        font-size:15px;
+
+    }
+
+    .planning-item-footer{
+
+        font-size:12px;
+
+    }
+
+}
+
+
